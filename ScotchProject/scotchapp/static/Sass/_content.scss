@@ -1,0 +1,155 @@
+.main {
+
+    /* .main__welcome */
+
+    &__welcome {
+        font-weight: 500;
+        color: rgb(65, 61, 61);
+        margin-bottom: 1%;
+    }
+
+    /* .main__card-group */
+
+    &__card-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* .main__card-group-card */
+
+    &__card-group-card {
+        width: 300px;
+        margin: 1%;
+    }
+}
+.card {
+
+    /* .card__title */
+
+    &__title {
+        width: 100%;
+    }
+
+    /* .card__title-img */
+
+    &__title-img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* .card__info */
+
+    /* .card__info-name */
+
+    &__info-name {
+        font-size: 20px;
+        font-weight: 400;
+        color: rgb(65, 61, 61);
+    }
+
+    /* .card__info-subtitle */
+
+    &__info-subtitle {
+        font-size: 16px;
+        font-weight: lighter;
+    }
+
+    /* .card__end */
+
+    &__end {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* .card__end-price */
+
+    &__end-price h1 {
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    /* .card__end-button */
+
+    &__end-button button {
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        width: 125px;
+        border-radius: 25px;
+        height: 40px;
+        font-weight: lighter;
+    }
+}
+
+
+@media (min-width:100px) and (max-width:768px) {
+    .main {
+
+        /* .main__welcome */
+    
+        &__welcome {
+            font-size: 30px;
+        }
+    
+        /* .main__card-group */
+    
+        &__card-group {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        /* .main__card-group-card */
+    
+        &__card-group-card {
+            width: 45%;
+        }
+    }
+    .card {
+    
+        /* .card__title *
+    
+        /* .card__title-img */
+    
+        &__title-img {
+            width: 100%;
+        }
+    
+        /* .card__info */
+    
+        /* .card__info-name */
+    
+        &__info-name {
+            font-size: medium;
+            font-weight: bold;
+        }
+    
+        /* .card__info-subtitle */
+    
+        &__info-subtitle {
+            font-size: medium;
+            margin-bottom: 1px;
+            margin-top: 1px;
+        }
+    
+        /* .card__end-price */
+    
+        &__end-price h1 {
+            font-size: large;
+        }
+    
+        /* .card__end-button */
+    
+        &__end-button button {
+            font-size: small;
+            padding: 5px;
+            width: 80px;
+            height: 30px;
+        }
+    }
+}

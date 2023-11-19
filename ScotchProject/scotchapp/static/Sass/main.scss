@@ -1,0 +1,13 @@
+@import "./header";
+@import "./content";
+
+
+@font-face {
+    font-family: 'Zt Chablis Regular';
+    src: local('Zt Chablis Regular'), url('fonts/ZtChablisRegular-51Y1L.woff') format('woff');
+    }
+    
+
+body {
+    font-family: 'Zt Chablis Regular';
+}
