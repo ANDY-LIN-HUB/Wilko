@@ -106,629 +106,188 @@
     <!-- Start Main -->
     <main class="main">
         <h1 class="main__welcome" id="eat">Закуски</h1>
+        
         <div class="main__card-group">
+            {% for item in menu_eat %}
             <div class="main__card-group-card">
                 <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
+                    <img src="{{ MEDIA_URL }} {{  item.image.url  }}" alt="" class="card__title-img">
                 </div>
                 <div class="card__info">
                     <h1 class="card__info-name">
-                        Картофель Фри
+                        {{ item.title }}
                     </h1>
                     <p class="card__info-subtitle">
-                        Картофель фри, специи
+                        {{ item.description }}
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
+                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
                     <div class="card__end-button"><button>Купить</button></div>
                 </div>
             </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
         <h1 class="main__welcome" id="salat">Салаты</h1>
         <div class="main__card-group">
+            {% for item in menu_salat %}
             <div class="main__card-group-card">
                 <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
+                    <img src="{{ MEDIA_URL }} {{  item.image.url  }}" alt="" class="card__title-img">
                 </div>
                 <div class="card__info">
                     <h1 class="card__info-name">
-                        Картофель Фри
+                        {{ item.title }}
                     </h1>
                     <p class="card__info-subtitle">
-                        Картофель фри, специи
+                        {{ item.description }}
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
+                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
                     <div class="card__end-button"><button>Купить</button></div>
                 </div>
             </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
         <h1 class="main__welcome" id="soup">Супы</h1>
         <div class="main__card-group">
+            {% for item in menu_soup %}
             <div class="main__card-group-card">
                 <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
+                    <img src="{{ MEDIA_URL }} {{  item.image.url  }}" alt="" class="card__title-img">
                 </div>
                 <div class="card__info">
                     <h1 class="card__info-name">
-                        Картофель Фри
+                        {{ item.title }}
                     </h1>
                     <p class="card__info-subtitle">
-                        Картофель фри, специи
+                        {{ item.description }}
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
+                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
                     <div class="card__end-button"><button>Купить</button></div>
                 </div>
             </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
         <h1 class="main__welcome" id="pasta">Паста</h1>
         <div class="main__card-group">
+            {% for item in menu_pasta %}
             <div class="main__card-group-card">
                 <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
+                    <img src="{{ MEDIA_URL }} {{  item.image.url  }}" alt="" class="card__title-img">
                 </div>
                 <div class="card__info">
                     <h1 class="card__info-name">
-                        Картофель Фри
+                        {{ item.title }}
                     </h1>
                     <p class="card__info-subtitle">
-                        Картофель фри, специи
+                        {{ item.description }}
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
+                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
                     <div class="card__end-button"><button>Купить</button></div>
                 </div>
             </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
         <h1 class="main__welcome" id="pizza">Пицца</h1>
         <div class="main__card-group">
+            {% for item in menu_pizza %}
             <div class="main__card-group-card">
                 <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
+                    <img src="{{ MEDIA_URL }} {{  item.image.url  }}" alt="" class="card__title-img">
                 </div>
                 <div class="card__info">
                     <h1 class="card__info-name">
-                        Картофель Фри
+                        {{ item.title }}
                     </h1>
                     <p class="card__info-subtitle">
-                        Картофель фри, специи
+                        {{ item.description }}
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
+                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
                     <div class="card__end-button"><button>Купить</button></div>
                 </div>
             </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
         <h1 class="main__welcome" id="sandwitch">Сэндвичи</h1>
         <div class="main__card-group">
+            {% for item in menu_sandwitch %}
             <div class="main__card-group-card">
                 <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
+                    <img src="{{ MEDIA_URL }} {{  item.image.url  }}" alt="" class="card__title-img">
                 </div>
                 <div class="card__info">
                     <h1 class="card__info-name">
-                        Картофель Фри
+                        {{ item.title }}
                     </h1>
                     <p class="card__info-subtitle">
-                        Картофель фри, специи
+                        {{ item.description }}
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
+                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
                     <div class="card__end-button"><button>Купить</button></div>
                 </div>
             </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
         <h1 class="main__welcome" id="desert">Десерты</h1>
         <div class="main__card-group">
+            {% for item in menu_desert %}
             <div class="main__card-group-card">
                 <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
+                    <img src="{{ MEDIA_URL }} {{  item.image.url  }}" alt="" class="card__title-img">
                 </div>
                 <div class="card__info">
                     <h1 class="card__info-name">
-                        Картофель Фри
+                        {{ item.title }}
                     </h1>
                     <p class="card__info-subtitle">
-                        Картофель фри, специи
+                        {{ item.description }}
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
+                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
                     <div class="card__end-button"><button>Купить</button></div>
                 </div>
             </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
         <h1 class="main__welcome" id="drinks">Напитки</h1>
         <div class="main__card-group">
+            {% for item in menu_drinks %}
             <div class="main__card-group-card">
                 <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
+                    <img src="{{ MEDIA_URL }} {{  item.image.url  }}" alt="" class="card__title-img">
                 </div>
                 <div class="card__info">
                     <h1 class="card__info-name">
-                        Картофель Фри
+                        {{ item.title }}
                     </h1>
                     <p class="card__info-subtitle">
-                        Картофель фри, специи
+                        {{ item.description }}
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
+                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
                     <div class="card__end-button"><button>Купить</button></div>
                 </div>
             </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
-            <div class="main__card-group-card">
-                <div class="card__title">
-                    <img src="{{ MEDIA_URL }}img/div.js-product-img(1).png" alt="" class="card__title-img">
-                </div>
-                <div class="card__info">
-                    <h1 class="card__info-name">
-                        Картофель Фри
-                    </h1>
-                    <p class="card__info-subtitle">
-                        Картофель фри, специи
-                    </p>
-                </div>
-                <div class="card__end">
-                    <div class="card__end-price"><h1>300₽</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </main>
 
