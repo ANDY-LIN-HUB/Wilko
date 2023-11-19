@@ -10,3 +10,5 @@ Scotch catering website with home delivery
 scotchapp - основное приложение
 
 корень и сетинги в ScotchProject
+
+БД дефолтная
