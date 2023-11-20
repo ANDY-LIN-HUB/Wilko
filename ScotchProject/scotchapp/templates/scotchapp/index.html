@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% load static %}
     <meta charset="UTF-8">
@@ -11,50 +12,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
+
 <body>
     <header class="header">
         <div class="header__top">
             <div class="header__top__carousel">
                 <div class="carousel__item">
-                  <img src="{{ MEDIA_URL }}img/item.jpg" alt="Image 1">
+                    <img src="{{ MEDIA_URL }}media/img/item.jpg" alt="Image 1">
                 </div>
                 <div class="carousel__item">
-                  <img src="{{ MEDIA_URL }}img/item.jpg" alt="Image 2">
+                    <img src="{{ MEDIA_URL }}img/item.jpg" alt="Image 2">
                 </div>
                 <div class="carousel__item">
-                  <img src="image3.jpg" alt="Image 3">
+                    <img src="image3.jpg" alt="Image 3">
                 </div>
                 <div id="prev">Предыдущее</div>
                 <div id="next">Следующее</div>
             </div>
             <!-- Header-Middle -->
-            
+
         </div>
         <div class="fixed">
             <div class="header__middle">
                 <div class="header__middle-logo">
-                    <img src="{{ MEDIA_URL }}img/logo.jpg" alt="" class="header__middle-logo-img">
-                        <h1 class="header__middle-info-time">ДОСТАВКА (c 16:00 до 3:00) </h1>
-                        <h1 class="header__middle-info-number">+7 (952) 025-46-48</h1>
+                    <img src="{{ MEDIA_URL }}media/img/logo.jpg" alt="" class="header__middle-logo-img">
+                    <h1 class="header__middle-info-time">ДОСТАВКА (c 16:00 до 3:00) </h1>
+                    <h1 class="header__middle-info-number">+7 (952) 025-46-48</h1>
                 </div>
-                
-    
+
+
                 <div class="header__middle-cart">
                     <div id="offcanvas" class="offcanvas">
                         <div class="offcanvas__header">
-                          <h2>Корзина</h2>
-                          <button id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+                            <h2>Корзина</h2>
+                            <button id="close-btn"><i class="fa-solid fa-xmark"></i></button>
                         </div>
                         <div class="offcanvas__body">
-                          <h1 class="offcanvas__body-title">Ой, Пусто!</h1>
-                          <p class="offcanvas__body-subtitle">Ваша корзина пуста, откройте «Меню»
-                            и выберите понравившийся товар.</p>
-                            <p class="offcanvas__body-reminder">Доставка осуществляется только по районам: "СЗР", "Юго-Запад", "Богданка", "Центр"</p>
+                            <p class="offcanvas__body-reminder">Доставка осуществляется только по районам: "СЗР",
+                                "Юго-Запад", "Богданка", "Центр"</p>
+                                {% for item in cart_items %}
+                                <div class="cart-item">
+                                    <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                                    <h2>{{ item.title }}</h2>
+                                    <p>Цена: {{ item.price }}</p>
+                                    <p>Количество: {{ item.quantity }}</p>
+                                    <a href="{% url 'remove_from_cart' item.id %}">Удалить</a>
+                                </div>
+                            {% endfor %}
                             <button class="offcanvas__body-button">К покупкам</button>
                         </div>
-                       </div>
-                       
-                       <button id="open-btn"><i class="fa-solid fa-cart-shopping"><span>Корзина пуста</span></i></button>
+                    </div>
+
+                    <button id="open-btn"><i class="fa-solid fa-cart-shopping"><span>Корзина пуста</span></i></button>
                 </div>
             </div>
             <div class="header__bottom">
@@ -71,17 +80,17 @@
                     <div class="header__bottom-dropdown">
                         <button onclick="myFunction()" class="dropbtn"><i class="fa-solid fa-bars"></i></button>
                         <div id="myDropdown" class="dropdown-content">
-                          <a href="#">Контакты</a>
-                          <a href="#">О нас</a>
-                          <a href="#">Прочее</a>
+                            <a href="#">Контакты</a>
+                            <a href="#">О нас</a>
+                            <a href="#">Прочее</a>
                         </div>
-                      </div>             
-                 
+                    </div>
+
                 </div>
             </div>
         </div>
     </header>
-    
+
     <div class="menu">
         <button class="menu__button">
             <i class="fa-solid fa-bars"></i>
@@ -97,16 +106,16 @@
             <a href="#desert" class="menu__link">Десерты</a>
             <a href="#drinks" class="menu__link">Напитки</a>
         </div>
-       </div>
-       
-       
-      
+    </div>
+
+
+
 
     <!-- End Header -->
     <!-- Start Main -->
     <main class="main">
         <h1 class="main__welcome" id="eat">Закуски</h1>
-        
+
         <div class="main__card-group">
             {% for item in menu_eat %}
             <div class="main__card-group-card">
@@ -122,8 +131,12 @@
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
+                    <div class="card__end-price">
+                        <h1>{{ item.price }} р.</h1>
+                    </div>
+                    <div class="card__end-button">
+                        <button><a href="{% url 'add_to_cart' item.id %}">Купить</a></button>
+                    </div>
                 </div>
             </div>
             {% endfor %}
@@ -145,8 +158,12 @@
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
+                    <div class="card__end-price">
+                        <h1>{{ item.price }} р.</h1>
+                    </div>
+                    <div class="card__end-button">
+                        <button><a href="{% url 'add_to_cart' item.id %}">Купить</a></button>
+                    </div>
                 </div>
             </div>
             {% endfor %}
@@ -168,8 +185,12 @@
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
+                    <div class="card__end-price">
+                        <h1>{{ item.price }} р.</h1>
+                    </div>
+                    <div class="card__end-button">
+                        <button><a href="{% url 'add_to_cart' item.id %}">Купить</a></button>
+                    </div>
                 </div>
             </div>
             {% endfor %}
@@ -191,8 +212,12 @@
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
+                    <div class="card__end-price">
+                        <h1>{{ item.price }} р.</h1>
+                    </div>
+                    <div class="card__end-button">
+                        <button><a href="{% url 'add_to_cart' item.id %}">Купить</a></button>
+                    </div>
                 </div>
             </div>
             {% endfor %}
@@ -214,8 +239,12 @@
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
+                    <div class="card__end-price">
+                        <h1>{{ item.price }} р.</h1>
+                    </div>
+                    <div class="card__end-button">
+                        <button><a href="{% url 'add_to_cart' item.id %}">Купить</a></button>
+                    </div>
                 </div>
             </div>
             {% endfor %}
@@ -237,8 +266,12 @@
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
+                    <div class="card__end-price">
+                        <h1>{{ item.price }} р.</h1>
+                    </div>
+                    <div class="card__end-button">
+                        <button><a href="{% url 'add_to_cart' item.id %}">Купить</a></button>
+                    </div>
                 </div>
             </div>
             {% endfor %}
@@ -260,8 +293,12 @@
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
+                    <div class="card__end-price">
+                        <h1>{{ item.price }} р.</h1>
+                    </div>
+                    <div class="card__end-button">
+                        <button><a href="{% url 'add_to_cart' item.id %}">Купить</a></button>
+                    </div>
                 </div>
             </div>
             {% endfor %}
@@ -283,8 +320,12 @@
                     </p>
                 </div>
                 <div class="card__end">
-                    <div class="card__end-price"><h1>{{ item.price }} р.</h1></div>
-                    <div class="card__end-button"><button>Купить</button></div>
+                    <div class="card__end-price">
+                        <h1>{{ item.price }} р.</h1>
+                    </div>
+                    <div class="card__end-button">
+                        <button><a href="{% url 'add_to_cart' item.id %}">Купить</a></button>
+                    </div>
                 </div>
             </div>
             {% endfor %}
@@ -294,4 +335,5 @@
 
     <script src="{% static 'js/main.js' %}"></script>
 </body>
+
 </html>

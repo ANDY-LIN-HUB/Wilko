@@ -5,7 +5,6 @@ from django.db import models
 class MenuItem(models.Model):
     image = models.ImageField(verbose_name='Изображение', upload_to='images')
     title = models.CharField(max_length=80, verbose_name='Название')
-    weight = models.CharField(max_length=15, verbose_name='Вес')
     price = models.DecimalField(max_digits=10, decimal_places=0, verbose_name='Цена')
     description = models.TextField(max_length=120, default=0, verbose_name='Состав')
 

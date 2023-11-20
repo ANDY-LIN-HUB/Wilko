@@ -12,6 +12,8 @@
   width: 100%;
 }
 
+
+
 .header {
   /* .header__middle */
   /* .header__middle-logo */
@@ -381,6 +383,8 @@
   margin: 1%;
 }
 
+
+
 .card {
   /* .card__title */
   /* .card__title-img */
@@ -452,7 +456,6 @@
     /* .card__info */
     /* .card__info-name */
     /* .card__info-subtitle */
-    /* .card__end */
     /* .card__end-price */
     /* .card__end-button */
   }
@@ -485,3 +488,5 @@
 body {
   font-family: "Zt Chablis Regular";
 }/*# sourceMappingURL=main.css.map */
+
+
